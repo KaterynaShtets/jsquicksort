@@ -3,7 +3,6 @@
         var i = left;                
         var j = right;
         var middle = arr[ Math.round(( left+right  ) / 2) ];  
-        
         while(i < j){
             while(arr[i] < middle)
               {
@@ -14,29 +13,20 @@
                 j--;  
               }
             if(i <= j){           
-                
                 var temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-                
                 i++; j--;
             }
-        } 
-       
-        
+        };
         if(left < j){
-          
-          quickSort(arr, left, j);
-        } 
-
-        if(i < right){
-          
+       quickSort(arr, left, j);
+        }
+        if(i < right){       
           quickSort(arr, i, right);
         } 
-    }
+    };
 var array = [8, 2, 5, 7, 4, 3, 12, 6, 19, 11, 10, 13, 9];
 quickSort(array, 0, array.length -1);
-
 console.log(array);
-
 </script>
